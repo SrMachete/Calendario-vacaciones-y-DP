@@ -1,0 +1,69 @@
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+  background-color: #f2f2f7;
+  margin: 0;
+  padding: 0;
+  color: #1c1c1e;
+}
+h1 {
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #ccc;
+}
+.container {
+  padding: 1rem;
+}
+.calendar-controls {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.day {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  min-height: 60px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+}
+.day:hover {
+  background: #e6e6ea;
+}
+#popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.popup-box {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.closeBtn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #007AFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
