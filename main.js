@@ -36,10 +36,10 @@ function renderCalendar(date) {
 
 function showAssignPopup(day, month, year) {
   const selectedDate = `${year}-${month + 1}-${day}`;
-  let html = `<h3>${selectedDate}</h3>`;
-  html += "<p>Selecciona un asociado para asignar:</p><ul>";
+  let html = `<h3>Asignaciones para ${selectedDate}</h3>`;
+  html += "<p><strong>Lista de asociados:</strong></p><ul>";
   for (const a of asociados) {
-    html += `<li style="color:${a.color}; margin-bottom: 4px;"><strong>${a.login}</strong> (${a.turno})<br/><small>${a.procesos.join(", ")}</small></li>`;
+    html += `<li style="color:${a.color}; margin-bottom: 6px;"><strong>${a.login}</strong> (${a.turno})<br/><small>${a.procesos.join(", ")}</small></li>`;
   }
   html += "</ul>";
   popupContent.innerHTML = html;
